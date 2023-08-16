@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+ {% load static  %}
+
+
+ {% block titulo %}
+    Sección Directores!
+                    
+ {% endblock titulo %}
+
+
+ {% block contenido %}
+ <br><               
+    <center><h3>Registro Directores</h3></center>
+ <br>
+    <center>
+      <table class="table table-dark table-striped">
+         <thead>
+            <tr>
+               <th>Nombre Director</th>
+               <th>Nacionalidad</th>
+            </tr>
+         </thead>
+   
+         <tbody>  
+               {% for elemento in directores  %}
+                  <tr>
+                     <td>{{elemento.nombre}}</td>
+                     <td>{{elemento.nacionalidad}}</td>                     
+                  </tr>
+               {% endfor %}
+         </tbody>
+      </table>
+   </center>
+   
+      
+  {{ titulo | capfirst }}  Fecha de Hoy: {% now "d / m / y"    %}
+   
+
+    
+ {% endblock contenido %}
+    
+   

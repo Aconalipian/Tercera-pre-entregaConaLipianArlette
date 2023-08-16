@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+ {% load static  %}
+
+
+ {% block titulo %}
+    Sección agregando nuevos títulos                    
+ {% endblock titulo %}
+
+
+
+{% block contenido %}
+    <center><h2>Agregar Película</h2></center>
+    <center>
+        <form action="" method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table}}
+            </table>
+            <input type="submit" value="Enviar">
+        </form>
+    </center>
+{% endblock contenido %}

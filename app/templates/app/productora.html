@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+ {% load static  %}
+
+
+ {% block titulo %}
+   Sección Productoras!                 
+ {% endblock titulo %}
+
+
+ {% block contenido %}
+    <br>
+                      
+    <center><h3>Registro de Productoras</h3></center>
+    <br>
+    <center>
+      <table class="table table-dark table-striped">
+         <thead>
+            <tr>
+               <th>Nombre Productora</th>
+               <th>Pais de origen</th>
+            </tr>
+         </thead>
+   
+         <tbody>  
+               {% for elemento in productora  %}
+                  <tr>
+                     <td>{{elemento.nombre}}</td>
+                     <td>{{elemento.pais}}</td>                     
+                  </tr>
+               {% endfor %}
+         </tbody>
+      </table>
+   </center>
+   
+      
+  {{ titulo | capfirst }}  Fecha de Hoy: {% now "d / m / y"    %} 
+      
+ {% endblock contenido %}

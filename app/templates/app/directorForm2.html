@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+ {% load static  %}
+
+
+ {% block titulo %}
+    ingresar un nuevo director!                    
+ {% endblock titulo %}
+
+
+
+{% block contenido %}
+<center> <h2>Agregar Director</h2></center>
+<center>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table}}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+</center>
+{% endblock contenido %}

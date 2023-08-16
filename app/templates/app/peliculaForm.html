@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+ {% load static  %}
+
+
+ {% block titulo %}
+    Pagina de bienvenida                    
+ {% endblock titulo %}
+
+
+
+{% block contenido %}
+    <h2>Agregar Película</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <p>Nombre Pelicula: <input type="text" name="nombre" id="nombre"></p>
+        <p>Año Estreno: <input type="date" name="fecha_estreno" id="fecha_estreno"></p>  
+        <p>Productora: <input type="text" name="productora" id="productora"></p>
+        <p>Genero: <input type="text" name="genero" id="genero"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

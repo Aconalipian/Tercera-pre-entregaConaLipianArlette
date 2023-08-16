@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+ {% load static  %}
+
+
+ {% block titulo %}
+    Pagina de bienvenida                    
+ {% endblock titulo %}
+
+
+{% block contenido %}
+    <h2>Agregar Director</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <p>Nombre Director: <input type="text" name="nombre" id="nombre"></p>
+        <p>Nacionalidad: <input type="text" name="nacionalidad" id="nacionalidad"></p>
+        <input type="submit" value="Enviar">
+
+
+    </form>
+{% endblock contenido %}
