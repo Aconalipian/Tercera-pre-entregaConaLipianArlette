@@ -3,7 +3,7 @@ Desarrollar una WEB Django con patrón MVT subida a Github.
 
 
 
-Nombre: Arlette Coa Lipian
+Nombre: Arlette Cona Lipian
 
 
 Preentrega: 3
@@ -55,4 +55,8 @@ se crea formularios para insertar datos a todas las clases en models.py
 /peliculaForm2/    permite agregar una pelicula nueva al motor de base de datos
 /directorForm2/	   permite agregar un director nuevo al motor de base de datos
 /productoraForm2/  permite agrear una nueva productora al motor de base de datos
+
+
+
+
 
